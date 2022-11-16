@@ -7,10 +7,11 @@ router.get('/', (req, res) => {
 
 router.get('/productId', (req, res) => {
     // check if the productId = 'special'
-    if(req.params.productId === 'special') {
+    
+    if(req.params.productId == 'special') {
         res.status(200).json( {message: 'You have a SPECIAL ID'} )
     } else {
-        res.status(200).json( {message: 'You have an ORDINARY ID'} )
+        res.status(200).json( {message: 'You have an ORDINoY ID' ,rex :req}  )
     }
 })
 
